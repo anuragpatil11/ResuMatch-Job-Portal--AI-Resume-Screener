@@ -51,10 +51,15 @@ const Job = () => {
             <span>Start Your Journey</span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Discover <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Opportunities</span> with ResuMatch
+            Discover{" "}
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              Opportunities
+            </span>{" "}
+            with ResuMatch
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Whether you're seeking your dream job or looking to hire top talent, ResuMatch connects you with the perfect opportunities.
+            Whether you're seeking your dream job or looking to hire top talent,
+            ResuMatch connects you with the perfect opportunities.
           </p>
         </div>
 
@@ -68,7 +73,8 @@ const Job = () => {
               Find Your Dream Job
             </h2>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Explore thousands of job listings tailored to your skills and preferences with our AI-powered matching.
+              Explore thousands of job listings tailored to your skills and
+              preferences with our AI-powered matching.
             </p>
             <Link
               to="/applicant/jobs"
@@ -88,10 +94,11 @@ const Job = () => {
               Hire Top Talent
             </h2>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Post your job openings and let our AI connect you with the best candidates for your roles.
+              Post your job openings and let our AI connect you with the best
+              candidates for your roles.
             </p>
             <Link
-              to="/recruiter"
+              to="/recruiter/post-job"
               className="group inline-flex items-center gap-2 bg-white border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-full font-semibold text-lg hover:bg-purple-50 hover:border-purple-700 transition-all duration-300"
             >
               Post a Job
@@ -102,7 +109,7 @@ const Job = () => {
       </div>
 
       {/* CSS for animations */}
-      <style >{`
+      <style>{`
         @keyframes blob {
           0% { transform: translate(0px, 0px) scale(1); }
           33% { transform: translate(30px, -50px) scale(1.1); }
