@@ -2,7 +2,7 @@
 
 ResuMatch is a modern job portal web application that bridges the gap between job seekers and recruiters through an AI-powered resume screening system. Built with the **MERN stack**, it delivers personalized job recommendations and a recruiter dashboard to view ranked applications based on skill matching.
 
-🔗 **Live Demo**: [resummatch.netlify.app]((https://resummatch.netlify.app/))  
+🔗 **Live Demo**: [resummatch.netlify.app](https://resummatch.netlify.app/)  
 ---
 
 ## ✨ Features
