@@ -98,23 +98,22 @@ export const loginUser = async (req, res) => {
     res
       .status(200)
       .cookie("token", token, {
-        maxAge: 1 * 24 * 60 * 60 * 1000, // 1 day
-        httpOnly: true, // Corrected from httpsOnly
-        secure: process.env.NODE_ENV === "production", // Secure only in production
-        sameSite: "strict",
+        maxAge: 1 * 24 * 60 * 60 * 1000,
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "none", // ✅ must be "none" for cross-site cookies
       })
       .cookie("role", user.role, {
-        // ✅ add role cookie
         maxAge: 1 * 24 * 60 * 60 * 1000,
-        httpOnly: false, // role read karna frontend me ho sakta hai
+        httpOnly: false,
         secure: process.env.NODE_ENV === "production",
-        sameSite: "strict",
+        sameSite: "none", // ✅ must be "none"
       })
       .json({
         success: true,
         message: `Welcome back ${userData.fullName}`,
         user: userData,
-        token
+        token,
       });
   } catch (err) {
     console.error("Login error:", err.message); // Log for debugging
