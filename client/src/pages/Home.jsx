@@ -156,7 +156,7 @@
 //     const timer = setInterval(() => {
 //       currentStep++;
 //       const progress = currentStep / steps;
-      
+
 //       setStats({
 //         jobs: Math.floor(targetStats.jobs * progress),
 //         users: Math.floor(targetStats.users * progress),
@@ -205,17 +205,17 @@
 //               <Sparkles className="w-4 h-4" />
 //               <span>AI-Powered Job Matching Platform</span>
 //             </div>
-            
+
 //             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
 //               Welcome to{" "} Resu
 //               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient">
 //                 Match
 //               </span>
 //             </h1>
-            
+
 //             <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto text-gray-600 mb-8 leading-relaxed">
-//               AI-powered resume screening to connect top talent with the perfect jobs. 
-//               <span className="text-blue-600 font-semibold"> Upload your resume</span> or 
+//               AI-powered resume screening to connect top talent with the perfect jobs.
+//               <span className="text-blue-600 font-semibold"> Upload your resume</span> or
 //               <span className="text-purple-600 font-semibold"> post a job</span> today!
 //             </p>
 
@@ -223,8 +223,8 @@
 //             <div className="mb-8">
 //               <div className="inline-flex items-center gap-3 bg-white rounded-2xl px-6 py-4 shadow-lg border border-gray-100">
 //                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-//                   {React.createElement(features[currentFeature].icon, { 
-//                     className: "w-5 h-5 text-white" 
+//                   {React.createElement(features[currentFeature].icon, {
+//                     className: "w-5 h-5 text-white"
 //                   })}
 //                 </div>
 //                 <span className="text-gray-800 font-medium text-lg">
@@ -242,7 +242,7 @@
 //                 Explore Jobs
 //                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
 //               </Link>
-              
+
 //             </div>
 //           </div>
 
@@ -278,7 +278,7 @@
 //         <div className="absolute inset-0">
 //           <div className="absolute top-20 right-20 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20"></div>
 //         </div>
-        
+
 //         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8">
 //           <div className="text-center mb-16">
 //             <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium mb-6">
@@ -506,10 +506,10 @@
 //             <span className="text-yellow-300">ResuMatch</span>
 //           </h2>
 //           <p className="text-xl md:text-2xl mb-12 leading-relaxed text-blue-100">
-//             Join thousands of job seekers and recruiters who trust ResuMatch to make perfect connections. 
+//             Join thousands of job seekers and recruiters who trust ResuMatch to make perfect connections.
 //             Your dream job or ideal candidate is just a click away!
 //           </p>
-          
+
 //           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
 //             <Link
 //               to="/register"
@@ -518,7 +518,7 @@
 //               Get Started Free
 //               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
 //             </Link>
-            
+
 //             <div className="flex items-center gap-4 text-blue-100">
 //               <div className="flex items-center gap-2">
 //                 <CheckCircle className="w-5 h-5 text-green-300" />
@@ -541,7 +541,7 @@
 //           66% { transform: translate(-20px, 20px) scale(0.9); }
 //           100% { transform: translate(0px, 0px) scale(1); }
 //         }
-        
+
 //         @keyframes gradient {
 //           0% { background-position: 0% 50%; }
 //           50% { background-position: 100% 50%; }
@@ -607,7 +607,12 @@ const Home = () => {
 
   // Animated counter effect
   useEffect(() => {
-    const targetStats = { jobs: 10000, users: 5000, matches: 8500, companies: 250 };
+    const targetStats = {
+      jobs: 10000,
+      users: 5000,
+      matches: 8500,
+      companies: 250,
+    };
     const duration = 2000;
     const steps = 50;
     const stepTime = duration / steps;
@@ -674,7 +679,8 @@ const Home = () => {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto text-gray-600 mb-8 leading-relaxed">
-              Connect with your dream job or perfect candidate using our AI-powered resume screening and job matching technology.
+              Connect with your dream job or perfect candidate using our
+              AI-powered resume screening and job matching technology.
             </p>
 
             {/* Rotating Feature Display */}
@@ -715,28 +721,36 @@ const Home = () => {
           {/* Stats Section */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mt-16">
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-3xl font-bold text-blue-600 mb-2">{stats.jobs.toLocaleString()}+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">
+                {stats.jobs.toLocaleString()}+
+              </div>
               <div className="flex items-center gap-2 text-gray-600 font-semibold text-sm">
                 <Briefcase className="w-4 h-4" />
                 Active Jobs
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-3xl font-bold text-green-600 mb-2">{stats.users.toLocaleString()}+</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">
+                {stats.users.toLocaleString()}+
+              </div>
               <div className="flex items-center gap-2 text-gray-600 font-semibold text-sm">
                 <Users className="w-4 h-4" />
                 Happy Users
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-3xl font-bold text-purple-600 mb-2">{stats.matches.toLocaleString()}+</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">
+                {stats.matches.toLocaleString()}+
+              </div>
               <div className="flex items-center gap-2 text-gray-600 font-semibold text-sm">
                 <Target className="w-4 h-4" />
                 Successful Matches
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-3xl font-bold text-orange-600 mb-2">{stats.companies.toLocaleString()}+</div>
+              <div className="text-3xl font-bold text-orange-600 mb-2">
+                {stats.companies.toLocaleString()}+
+              </div>
               <div className="flex items-center gap-2 text-gray-600 font-semibold text-sm">
                 <Building2 className="w-4 h-4" />
                 Partner Companies
@@ -765,10 +779,14 @@ const Home = () => {
               Why Choose ResuMatch?
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Powered by <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Advanced AI</span>
+              Powered by{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Advanced AI
+              </span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover a smarter way to find jobs or hire talent with our cutting-edge technology.
+              Discover a smarter way to find jobs or hire talent with our
+              cutting-edge technology.
             </p>
           </div>
 
@@ -781,7 +799,8 @@ const Home = () => {
                 AI Skill Extraction
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Our AI instantly analyzes your resume to extract skills, matching you with opportunities that fit your expertise.
+                Our AI instantly analyzes your resume to extract skills,
+                matching you with opportunities that fit your expertise.
               </p>
               <Link
                 to="/features"
@@ -801,7 +820,8 @@ const Home = () => {
                 Smart Job Matching
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Machine learning algorithms deliver personalized job recommendations based on your unique profile.
+                Machine learning algorithms deliver personalized job
+                recommendations based on your unique profile.
               </p>
               <Link
                 to="/features"
@@ -821,7 +841,8 @@ const Home = () => {
                 Recruiter Dashboard
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Streamline hiring with AI-ranked applications and powerful tools to find the perfect candidate.
+                Streamline hiring with AI-ranked applications and powerful tools
+                to find the perfect candidate.
               </p>
               <Link
                 to="/features"
@@ -845,10 +866,14 @@ const Home = () => {
               Simple Process
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              How It <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Works</span>
+              How It{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Works
+              </span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Start your journey in minutes with our streamlined process for job seekers and recruiters.
+              Start your journey in minutes with our streamlined process for job
+              seekers and recruiters.
             </p>
           </div>
 
@@ -861,17 +886,37 @@ const Home = () => {
                     <FileText className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold text-gray-900">For Job Seekers</h3>
-                    <p className="text-blue-600 font-semibold text-sm">Find Your Dream Job</p>
+                    <h3 className="text-2xl font-semibold text-gray-900">
+                      For Job Seekers
+                    </h3>
+                    <p className="text-blue-600 font-semibold text-sm">
+                      Find Your Dream Job
+                    </p>
                   </div>
                 </div>
 
                 <div className="space-y-6">
                   {[
-                    { step: 1, text: "Sign up and create your profile", icon: UserPlus },
-                    { step: 2, text: "Upload your resume (PDF format)", icon: Upload },
-                    { step: 3, text: "AI extracts your skills automatically", icon: Brain },
-                    { step: 4, text: "Browse jobs or get recommendations", icon: Search },
+                    {
+                      step: 1,
+                      text: "Sign up and create your profile",
+                      icon: UserPlus,
+                    },
+                    {
+                      step: 2,
+                      text: "Upload your resume (PDF format)",
+                      icon: Upload,
+                    },
+                    {
+                      step: 3,
+                      text: "AI extracts your skills automatically",
+                      icon: Brain,
+                    },
+                    {
+                      step: 4,
+                      text: "Browse jobs or get recommendations",
+                      icon: Search,
+                    },
                     { step: 5, text: "Apply with one click", icon: Zap },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4 group">
@@ -884,7 +929,9 @@ const Home = () => {
                         </p>
                       </div>
                       <div className="w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform duration-300">
-                        {React.createElement(item.icon, { className: "w-6 h-6" })}
+                        {React.createElement(item.icon, {
+                          className: "w-6 h-6",
+                        })}
                       </div>
                     </div>
                   ))}
@@ -912,20 +959,48 @@ const Home = () => {
                     <Building2 className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold text-gray-900">For Recruiters</h3>
-                    <p className="text-purple-600 font-semibold text-sm">Discover Top Talent</p>
+                    <h3 className="text-2xl font-semibold text-gray-900">
+                      For Recruiters
+                    </h3>
+                    <p className="text-purple-600 font-semibold text-sm">
+                      Discover Top Talent
+                    </p>
                   </div>
                 </div>
 
                 <div className="space-y-6">
                   {[
-                    { step: 1, text: "Create recruiter account", icon: UserPlus },
-                    { step: 2, text: "Post detailed job openings", icon: Briefcase },
-                    { step: 3, text: "Receive AI-ranked applications", icon: TrendingUp },
-                    { step: 4, text: "Review candidate match scores", icon: Award },
-                    { step: 5, text: "Hire the perfect candidate", icon: CheckCircle },
+                    {
+                      step: 1,
+                      text: "Create recruiter account",
+                      icon: UserPlus,
+                    },
+                    {
+                      step: 2,
+                      text: "Post detailed job openings",
+                      icon: Briefcase,
+                    },
+                    {
+                      step: 3,
+                      text: "Receive AI-ranked applications",
+                      icon: TrendingUp,
+                    },
+                    {
+                      step: 4,
+                      text: "Review candidate match scores",
+                      icon: Award,
+                    },
+                    {
+                      step: 5,
+                      text: "Hire the perfect candidate",
+                      icon: CheckCircle,
+                    },
                   ].map((item, index) => (
-                    <div key={index} step={item.step} className="flex items-start gap-4 group">
+                    <div
+                      key={index}
+                      step={item.step}
+                      className="flex items-start gap-4 group"
+                    >
                       <div className="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center font-bold text-sm flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                         {item.step}
                       </div>
@@ -935,7 +1010,9 @@ const Home = () => {
                         </p>
                       </div>
                       <div className="w-6 h-6 text-purple-600 group-hover:scale-110 transition-transform duration-300">
-                        {React.createElement(item.icon, { className: "w-6 h-6" })}
+                        {React.createElement(item.icon, {
+                          className: "w-6 h-6",
+                        })}
                       </div>
                     </div>
                   ))}
@@ -967,10 +1044,14 @@ const Home = () => {
               Trusted by Users
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              What Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Users Say</span>
+              What Our{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Users Say
+              </span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from job seekers and recruiters who found success with ResuMatch.
+              Hear from job seekers and recruiters who found success with
+              ResuMatch.
             </p>
           </div>
 
@@ -1004,15 +1085,22 @@ const Home = () => {
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <div className="mb-6">
                   <Quote className="w-8 h-8 text-blue-200 mb-3" />
-                  <p className="text-gray-700 leading-relaxed italic">"{testimonial.text}"</p>
+                  <p className="text-gray-700 leading-relaxed italic">
+                    "{testimonial.text}"
+                  </p>
                 </div>
                 <div className="border-t border-gray-100 pt-4">
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                  <p className="font-semibold text-gray-900">
+                    {testimonial.name}
+                  </p>
                   <p className="text-sm text-gray-600">
                     {testimonial.role} at {testimonial.company}
                   </p>
@@ -1039,7 +1127,8 @@ const Home = () => {
             Join <span className="text-yellow-300">ResuMatch</span> Today
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl mb-12 leading-relaxed text-blue-100">
-            Whether you're seeking your next career move or hiring top talent, ResuMatch makes it easy and fast.
+            Whether you're seeking your next career move or hiring top talent,
+            ResuMatch makes it easy and fast.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -1076,7 +1165,7 @@ const Home = () => {
       </section>
 
       {/* CSS for animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes blob {
           0% {
             transform: translate(0px, 0px) scale(1);

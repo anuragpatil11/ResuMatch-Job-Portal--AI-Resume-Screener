@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -61,9 +61,10 @@ export const AuthProvider = ({ children }) => {
       } else {
         toast.error(res.data.message || "Invalid credentials");
       }
-    } catch (err) {
-      console.error("Login Error:", err);
-      toast.error("Something went wrong!");
+    } catch (error) {
+      toast.error(
+        error.response?.data?.message || "Login failed. Please try again."
+      );
     }
   };
   // ✅ logout function

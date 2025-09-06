@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import JobPage from "./pages/JobPage";
@@ -7,17 +6,18 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import PostJob from "./components/PostJob";
-import PostedJobs from "./components/PostedJobs";
-import RecruiterProfile from "./components/RecruiterProfile";
-import RankedApplicants from "./components/RankedApplicants";
-import ApplicantProfile from "./components/ApplicantProfile";
-import Jobs from "./components/Jobs";
-
-import AppliedJobs from "./components/AppliedJobs";
+import PostJob from "./components/Recruiter/PostJob";
+import PostedJobs from "./components/Recruiter/PostedJobs";
+import RecruiterProfile from "./components/Recruiter/RecruiterProfile";
+import RankedApplicants from "./components/Recruiter/RankedApplicants";
+import ApplicantProfile from "./components/Applicant/ApplicantProfile";
+import Jobs from "./components/Applicant/Jobs";
+import AppliedJobs from "./components/Applicant/AppliedJobs";
+import RecommendedJob from "./components/Applicant/RecommendedJob";
+import Job from "./components/Applicant/Job";
+import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
-import RecommendedJob from "./components/RecommendedJob";
-import Job from "./components/Job";
+
 const App = () => {
   const location = useLocation();
 
