@@ -13,26 +13,6 @@ export const AuthProvider = ({ children }) => {
 
   // ✅ login function
   const login = async (email, password, role) => {
-    //     `${USER_API_URL}/login`,
-    //     { email, password },
-    //     {
-    //       headers: { "Content-Type": "application/json" },
-    //       withCredentials: true,
-    //     }
-    //   );
-
-    //   if (response.data.success) {
-    //     navigate("/");
-    //     toast.success(response.data.message || "Login successful!");
-    //     localStorage.setItem("token", response.data.token);
-    //     localStorage.setItem("role", response.data.user.role);
-    //     // navigate(response.data.user.role === "admin" ? "/admin" : "/applicant");
-    //   }
-    // } catch (error) {
-    //   toast.error(
-    //     error.response?.data?.message || "Login failed. Please try again."
-    //   );
-    // }
     try {
       const res = await axios.post(
         `${SERVER_URL}/user/login`,
@@ -52,8 +32,6 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem("role", res.data.user.role);
 
         // ✅ success toast
-        // toast.success("Login Successfully!");
-
         toast.success(res.data.message || "Login successful!");
 
         // ✅ navigate to homepage
