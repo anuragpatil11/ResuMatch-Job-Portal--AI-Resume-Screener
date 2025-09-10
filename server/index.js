@@ -39,8 +39,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(cors(corsOptions));
 // ✅ Allowed origins list
 const allowedOrigins = [
-  "http://localhost:5173", // local dev
-  "https://resummatch.netlify.app", // deployed frontend
+  process.env.CLIENT_LOCAL_URL, // local dev
+  process.env.CLIENT_PROD_URL, // deployed frontend
 ];
 
 // ✅ CORS config
